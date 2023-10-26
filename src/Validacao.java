@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Validacao {
@@ -29,8 +30,8 @@ public class Validacao {
     }
 
     public static void main(String[] args) {
-        String cpf = "123.456.789-09"; // Insira o CPF a ser validado aqui
-        if (validaCPF(cpf)) {
+        String cpf ="420.926.108-48" ;
+       if (validaCPF(cpf)) {
             System.out.println("CPF válido!");
         } else {
             System.out.println("CPF inválido!");
