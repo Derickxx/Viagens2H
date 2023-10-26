@@ -30,7 +30,7 @@ public class Validacao {
     }
 
     public static void main(String[] args) {
-        String cpf ="420.926.108-48" ;
+        String cpf ="420.926.108-99" ;
        if (validaCPF(cpf)) {
             System.out.println("CPF válido!");
         } else {
