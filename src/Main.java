@@ -1,41 +1,52 @@
 import javax.swing.*;
 
+
+
 public class Main {
     public static void main(String[] args) {
-        // Classe Objeto         Construtor
+
+
+
         Turista mochileiro = new Turista();
-        // Definir formato do objeto
+
+
+
         mochileiro.setNome("Lindsay Lohan");
         mochileiro.setCpf("123");
         Turista mochileira = new Turista("Maria");
-        // Definir comportamento
+
+
+
         String retorno = mochileira.viajar();
         System.out.println(retorno);
 
-        // criar um novo objeto
+
+
+
 
         Turista outroTurista = new Turista();
-        String nome = JOptionPane.showInputDialog("entre com seu nome");
+        String nome = JOptionPane.showInputDialog("Digite o seu nome: ");
         outroTurista.setNome(nome);
-        JOptionPane.showInputDialog(null, "O nome digitado foi " + outroTurista.getNome());
+        JOptionPane.showMessageDialog(null, "O nome que entrou foi: "+
+                outroTurista.getNome());
 
-        // criar a captura do cpf deste objeto
-        String cpf = JOptionPane.showInputDialog("digite seu cpf:");
-        If(Validacao.cpf(cpf));{
-            outroTurista.setCpf(cpf);
 
+
+
+
+        String cpf = JOptionPane.showInputDialog("Digite o seu cpf: ");
+        outroTurista.setCpf(cpf);
+
+
+
+        if(Validacao.validaCPF(cpf)) {
+            JOptionPane.showMessageDialog(null, outroTurista.getCpf()
+                    + " Seu cpf foi validado!");
         }
-        els {
-            System.out.println("erro CPF não validado!!!");
+        else{
+            JOptionPane.showMessageDialog(null, outroTurista.getCpf()
+                    + " Erro, seu cpf não é valido!");
         }
-        outroTurista.setCpf( Validacao.cpf(cpf));
-        JOptionPane.showInputDialog(null, outroTurista.getCpf()+
-                "Validacao");
-
-
-
-    }
-
-    private static void If(String cpf) {
     }
 }
+
